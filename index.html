@@ -18,89 +18,7 @@
         class="font-roboto text-grey font-normal leading-normal text-16 antialiased bg-white"
         id="top"
     >
-        <header class="pt-10">
-            <div class="container">
-                <div class="flex flex-wrap items-center -mx-4">
-                    <div class="w-full tablet:w-1/3 p-4">
-                        <img src="assets/img/logo.svg" alt="Emely Ragazi" />
-                    </div>
-
-                    <div class="w-full tablet:w-2/3 p-4">
-                        <ul class="list-reset flex justify-end">
-                            <li>
-                                <a
-                                    class="uppercase text-17 text-white font-bold no-underline px-4"
-                                    href="#"
-                                >
-                                    início
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    class="uppercase text-17 text-white font-bold no-underline px-4"
-                                    href="#"
-                                >
-                                    Nossos serviços
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    class="uppercase text-17 text-white font-bold no-underline px-4"
-                                    href="#"
-                                >
-                                    Quem somos
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    class="uppercase text-17 text-blue-light font-bold no-underline px-4"
-                                    href="#"
-                                >
-                                    Solicite um orçamento
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap pt-10 -mx-4">
-                    <div class="w-full tablet:w-1/2 p-4">
-                        <h1
-                            class="text-white text-60 mb-6 leading-none font-bold"
-                        >
-                            Nossos Idosos <br />
-                            merecem um <br />
-                            cuidado especial
-                        </h1>
-
-                        <p class="text-white text-20 leading-tight font-light">
-                            Oferecemos serviços especializados no cuidado <br />
-                            de idosos, com profissionais capacitados e
-                            <br />dedicados.
-                        </p>
-
-                        <a
-                            class="bg-blue-dark shadow-lg text-white uppercase mt-5 py-5 px-10 no-underline font-bolds inline-block rounded-full"
-                            href="#"
-                        >
-                            Solicite um Orçamento
-                        </a>
-                    </div>
-
-                    <div class="w-full tablet:w-1/2 p-4">
-                        <img
-                            class="-mb-12 shadow-lg"
-                            src="assets/img/banner-top.png"
-                            alt="Nossos idosos merecem um cuidado especial"
-                        />
-                    </div>
-                </div>
-            </div>
-        </header>
-
+        <div id="header"></div>
         <section class="bg-blue-lighetest pb-10 py-20">
             <div class="container">
                 <div class="flex flex-wrap -mx-4">
@@ -142,11 +60,26 @@
         <script type="text/javascript">
             // Import files to folde Views.
             $(document).ready(() => {
+                $("#header").load("views/header.html");
                 $("#service").load("views/services.html");
                 $("#profile").load("views/profile.html");
                 $("#about").load("views/about.html");
                 $("#footer").load("views/footer.html");
             });
+
+            const clickButton = () => {
+                $("#mobilenav").on("click", () => {
+                    $(".hamburger").toggleClass("is-active");
+                    $(".navmb").toggleClass("navmbactive");
+                });
+
+                $(".navmb ul li a").on("click", () => {
+                    $(".hamburger").removeClass("is-active");
+                    $(".navmb").removeClass("navmbactive");
+                });
+            };
+
+            setTimeout(clickButton, 200);
         </script>
     </body>
 </html>

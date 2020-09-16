@@ -11,6 +11,21 @@ header {
         rgba(0, 58, 79, 1) 0%,
         rgba(0, 151, 173, 1) 100%
     );
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+        background-color: #fff;
+    }
+
+    .navmb {
+        top: -999%;
+        transition: all ease 0.3s;
+    }
+
+    .navmbactive {
+        top: 0 !important;
+    }
 }
 
 footer {
