@@ -2077,6 +2077,12 @@ header {
   background: linear-gradient(90deg, #003a4f 0%, #0097ad 100%);
 }
 
+footer {
+  background: #003a4f;
+  background: -webkit-gradient(linear, left top, right top, from(#003a4f), to(#0097ad));
+  background: linear-gradient(90deg, #003a4f 0%, #0097ad 100%);
+}
+
 .list-reset {
   list-style: none;
   padding: 0;

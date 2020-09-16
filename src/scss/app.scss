@@ -13,4 +13,13 @@ header {
     );
 }
 
+footer {
+    background: rgb(0, 58, 79);
+    background: linear-gradient(
+        90deg,
+        rgba(0, 58, 79, 1) 0%,
+        rgba(0, 151, 173, 1) 100%
+    );
+}
+
 @tailwind utilities;
