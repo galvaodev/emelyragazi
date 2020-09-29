@@ -2,7 +2,7 @@ let mix = require('laravel-mix');
 require('laravel-mix-tailwind');
 
 mix.browserSync({
-    proxy: 'http://localhost:8888/joao/emelyragazi/',
+    proxy: 'http://localhost/emelyragazi/',
     files: ['assets/js/app.min.js', '*.html', 'views/*.html'],
 })
     .js('src/js/app.js', 'assets/js/app.min.js')

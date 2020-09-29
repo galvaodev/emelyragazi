@@ -37,4 +37,10 @@ footer {
     );
 }
 
+@screen desktop {
+    .container {
+        width: 1200px;
+    }
+}
+
 @tailwind utilities;

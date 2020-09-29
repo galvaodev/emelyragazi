@@ -49,8 +49,8 @@ let colors = {
     'white': '#ffffff',
     'grey': '#4D4D4D',
 
-    'blue': '#3A779D',
-    'blue-light': '#4DE3FF',
+    'blue': '#276C90',
+    'blue-light': '#00BAD5',
     'blue-dark': '#00B2CC',
     'blue-lighetest': '#EDF5F8',
 
